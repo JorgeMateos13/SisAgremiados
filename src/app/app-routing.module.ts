@@ -1,16 +1,45 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { FormatosComponent } from './components/formatos/formatos.component';
+import { ConveniosComponent } from './components/convenios/convenios.component';
+import { ConvocatoriasComponent } from './components/convocatorias/convocatorias.component';
 
 const routes: Routes = [
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path:'components',
+    loadChildren: () => import('./components/components.module').then( m => m.ComponentsModule)
+  },
+  {
+    path: 'panel',
+    loadChildren: () => import('./pages/paneladmin/paneladmin.module').then( m => m.PaneladminPageModule)
+  },
+  {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  }
+    path: 'panelad',
+    redirectTo: 'panel',
+    pathMatch: 'full'
+  },
+  {
+    path:'formatos',
+    component: FormatosComponent
+  },
+  {
+    path: 'convenios',
+    component: ConveniosComponent
+  },
+  {
+    path: 'convocatorias',
+    component: ConvocatoriasComponent
+  },
+
 ];
 
 @NgModule({
@@ -19,4 +48,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
