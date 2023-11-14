@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-paneladmin',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaneladminPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  formAgremiado(){
+    this.router.navigate(['/formAgremiados']);
+  }
+
+  verAgremiado(){
+    this.router.navigate(['/verAgremiado']);
+  }
+
+  verSolicitud(){
+    this.router.navigate(['/verSolicitud']);
+  }
+
+  enviarAviso(){
+    this.router.navigate(['/enviarAviso']);
   }
 
 }

@@ -3,6 +3,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { FormatosComponent } from './components/formatos/formatos.component';
 import { ConveniosComponent } from './components/convenios/convenios.component';
 import { ConvocatoriasComponent } from './components/convocatorias/convocatorias.component';
+import { FormAgremiadoComponent } from './components/form-agremiado/form-agremiado.component';
+import { VeragremiadoComponent } from './components/veragremiado/veragremiado.component';
+import { VersolicitudComponent } from './components/versolicitud/versolicitud.component';
+import { EnviaravisoComponent } from './components/enviaraviso/enviaraviso.component';
 
 const routes: Routes = [
   {
@@ -38,6 +42,22 @@ const routes: Routes = [
   {
     path: 'convocatorias',
     component: ConvocatoriasComponent
+  },
+  {
+    path:'formAgremiados',
+    component: FormAgremiadoComponent
+  },
+  {
+    path:'verAgremiado',
+    component: VeragremiadoComponent
+  },
+  {
+    path:'verSolicitud',
+    component: VersolicitudComponent
+  },
+  {
+    path:'enviarAviso',
+    component: EnviaravisoComponent
   },
 
 ];

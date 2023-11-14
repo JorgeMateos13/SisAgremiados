@@ -1,0 +1,107 @@
+<ion-header>
+    <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Agregar Agremiado</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-grid fixed>
+    <form [formGroup]="agregiadoForm" (ngSubmit)="submit()">
+        <ion-row class="ion-margin-top">
+        <ion-col size="4">
+            <ion-item>
+            <ion-label position="floating">Apellido Paterno</ion-label>
+            <ion-input formControlName="apellido_p" placeholder="Ingrese Apellido Paterno" type="text"></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col size="4">
+            <ion-item>
+            <ion-label position="floating">Apellido Materno</ion-label>
+            <ion-input formControlName="apellido_m" placeholder="Ingrese Apellido Materno" type="text"></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col size="4">
+            <ion-item>
+            <ion-label position="floating">Nombre(s)</ion-label>
+            <ion-input formControlName="nombre" placeholder="Ingrese Nombre(s)" type="text"></ion-input>
+            </ion-item>
+        </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-margin-top">
+            <ion-col size="6">
+            <ion-item>
+                <ion-label position="floating">NUP</ion-label>
+                <ion-input formControlName="NUP" placeholder="Ingrese NUP" type="text"> </ion-input>
+            </ion-item>
+            </ion-col>
+            <ion-col size="6">
+            <ion-item>
+                <ion-label position="floating">NUE</ion-label>
+                <ion-input formControlName="NUE" placeholder="Ingrese NUE" type="text"></ion-input>
+            </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-margin-top">
+            <ion-col size="6">
+            <ion-item>
+                <ion-label position="floating">RFC</ion-label>
+                <ion-input formControlName="RFC" placeholder="Ingrese RFC" type="text"></ion-input>
+            </ion-item>
+            </ion-col>
+            <ion-col size="6">
+            <ion-item>
+                <ion-label position="floating">NSS</ion-label>
+                <ion-input formControlName="NSS" placeholder="Ingrese NSS" type="text"></ion-input>
+            </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-margin-top">
+            <ion-col size="6">
+            <ion-item>
+                <ion-label position="floating">Fecha de Nacimiento</ion-label>
+                <ion-input formControlName="fecha_nacimiento" placeholder="Ingrese su fecha de nacimiento" type="text"></ion-input>
+            </ion-item>
+            </ion-col>
+            <ion-col size="6">
+            <ion-item>
+                <ion-label position="floating">Telefono</ion-label>
+                <ion-input formControlName="telefono" placeholder="Ingrese su telefono" type="number"></ion-input>
+            </ion-item>
+            </ion-col>
+        </ion-row>
+
+            <ion-row class="ion-margin-top">
+                <ion-col size="4">
+                <ion-item>
+                    <ion-label position="floating">¿Cuota pagada?</ion-label><br>
+                    <ion-input formControlName="cuota" placeholder="Ingrese su telefono" type="number"></ion-input>
+                </ion-item>
+                </ion-col>
+                <ion-col size="4">
+                <ion-item>
+                    <ion-label position="floating">Género</ion-label><br>
+                    <ion-input formControlName="id_genero" placeholder="Ingrese su telefono" type="number"></ion-input>
+                </ion-item>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-item>
+                        <ion-label position="floating">Rol</ion-label><br>
+                        <ion-input formControlName="id_rol" placeholder="Ingrese su rol" type="number"></ion-input>
+                    </ion-item>
+                    </ion-col>
+            </ion-row>
+        
+            <ion-row class="ion-margin-top">
+                <ion-col size="6">
+                <ion-button expand="full" shape="round" color="primary" type="submit" (click)="agregarAgremiado()">Agregar Agremiado</ion-button>
+                </ion-col>
+                <ion-col size="6">
+                <ion-button expand="full" shape="round" color="medium" (click)="backPanel()">Regresar al panel</ion-button>
+                </ion-col>
+            </ion-row>
+            </form>
+        </ion-grid>
+</ion-content>
